@@ -62,7 +62,7 @@ export default function BuyPopup(props) {
                 <p>{ product.title }</p>
               </div>
               <div class="modalFlexActions">
-                <badge-button onClick={ () => {location.href="cart"} }>Continue to cart</badge-button>
+                <badge-button onClick={ () => {location.href="/root-config/#/cart"} }>Continue to cart</badge-button>
                 <badge-button onClick={ () => {dispatchEvent("closeModal", null); resetState();} }>
                   or Continue shopping
                 </badge-button>
@@ -71,20 +71,22 @@ export default function BuyPopup(props) {
           </div>
           <h3>Take a look at similar products</h3>
           <div class="similarProducts">
-            { similarProducts.map(product => (
-              <div class="similarCard" key={product.id}>
-                <div class="similarCardImage">
-                  <img src={product.image}></img>
-                  <star-rating starwidth={product.rating.rate/5*100} ratingcount={product.rating.count}></star-rating>
-                </div>
-                <div class="similarCardInfo">
-                  <p><strong>{product.title}</strong></p>
-                  <badge-button class="similarCardBuy" onClick={ () => {dispatchEvent("productToCart", { product }); resetState();} }>
-                    🛒 ${product.price}
-                    </badge-button>
-                </div>
-              </div>
-            ))}
+              { (!isLoaded) ? <loading-spinner>Loading Products</loading-spinner> :
+                similarProducts.map(product => (
+                  <div class="similarCard" key={product.id}>
+                    <div class="similarCardImage">
+                      <img src={product.image}></img>
+                      <star-rating starwidth={product.rating.rate/5*100} ratingcount={product.rating.count}></star-rating>
+                    </div>
+                    <div class="similarCardInfo">
+                      <p><strong>{product.title}</strong></p>
+                      <badge-button class="similarCardBuy" onClick={ () => {dispatchEvent("productToCart", { product }); resetState();} }>
+                        🛒 ${product.price}
+                        </badge-button>
+                    </div>
+                  </div> 
+                )
+              ) }
           </div>
         </div>
       </div>
