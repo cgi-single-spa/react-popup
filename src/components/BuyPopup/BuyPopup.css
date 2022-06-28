@@ -1,91 +1,90 @@
 .BuyPopup {
-    overflow-y: initial !important;
+  overflow-y: initial !important;
 }
 
 .buyModalBackground {
-    position: fixed;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    backdrop-filter: blur(4px);
-    background-color: rgba(0,0,0,.5);
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .buyModal {
-    position: fixed;
-    z-index: 2;
-    width: 50%;
-    height: calc(100vh - 150px);
-    background-color: #fff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    box-shadow: 2px 2px 4px 1px rgb(0 0 0 / 50%);
-    overflow: hidden;
-    overflow-y: auto;
+  position: fixed;
+  z-index: 2;
+  width: 50%;
+  height: calc(100vh - 150px);
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  box-shadow: 2px 2px 4px 1px rgb(0 0 0 / 50%);
+  overflow: hidden;
+  overflow-y: auto;
 }
 
-.successBackground{
-    background-color: #e5f4e9;
+.successBackground {
+  background-color: #e5f4e9;
 }
 
 .modalFlexWrapper {
-    display: flex;
-    padding: 16px;
- 
+  display: flex;
+  padding: 16px;
 }
 
 .modalFlexMessage {
-    width: 70%;
+  width: 70%;
 }
 
 .modalFlexActions {
-    display: flex;
-    justify-self: flex-end;
-    flex-direction: column;
-    width: 30%;
+  display: flex;
+  justify-self: flex-end;
+  flex-direction: column;
+  width: 30%;
 }
 
 .modalFlexActions badge-button {
-    height: 50%;
-    --button-width: 100%
+  height: 50%;
+  --button-width: 100%;
 }
 
 .similarProducts {
-    padding: 16px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  padding: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .similarCard {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 16px;
 }
 
 .similarCardImage {
-    max-height: auto;
+  max-height: auto;
 }
 
 .similarCardImage > img {
-    width: auto;
-    height: 300px;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: cover;
+  width: auto;
+  height: 300px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .similarCardInfo p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .similarCardPrice {
-    color: #3f51b5;
+  color: #3f51b5;
 }
